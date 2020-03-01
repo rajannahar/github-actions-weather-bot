@@ -11,7 +11,6 @@ const weatherURL = new URL("http://api.openweathermap.org/data/2.5/weather")
 weatherURL.searchParams.set("q", city)
 weatherURL.searchParams.set("units", "metric")
 weatherURL.searchParams.set("APPID", weatherToken)
-// ?q=${city}&appid=${weatherToken}`)
 
 const getWeatherData = async () => {
   const resp = await fetch(weatherURL.toString())
